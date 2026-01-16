@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>CSS 2 · id + índice — Jairo Camblor</title>
+    <style>
+      /* Tipografía global (web-safe) */
+      * { font-family: Georgia, serif; }
+
+      /* Fondo general (RGB) */
+      body { background-color: rgb(240, 255, 255); }
+
+      /* === REGLAS GENERALES (afectan al primer animal) === */
+      h1 { color: rgb(0, 0, 255); }      /* color 1 */
+      p  { color: rgb(0, 0, 0); }       /* color 2 */
+      strong { color: rgb(0, 0, 139); } /* énfasis general */
+
+      /* === REGLAS POR id (afectan SOLO al segundo animal) === */
+      #titulo-animal2 { color: rgb(138, 43, 226); }   /* morado de ejemplo */
+      #desc-animal2   { color: rgb(38, 70, 83); }     /* azul petróleo */
+      #desc-animal2 strong { color: rgb(244, 162, 97); } /* énfasis SOLO dentro del segundo párrafo */
+    </style>
+  </head>
+  <body>
+    <!-- ÍNDICE: ul con enlaces a ids -->
+    <h2 id="indice">Índice</h2>
+    <ul>
+      <li><a href="#titulo-animal1">Primera criatura</a></li>
+      <li><a href="#titulo-animal2">Segunda criatura</a></li>
+    </ul>
+
+    <!-- PRIMER ANIMAL: añade ids para enlazar desde el índice -->
+    <h1 id="titulo-animal1">Primer animal:Guacamayo azul</h1>
+    <p id="desc-animal1">
+      El <strong>guacamayo azul o jacinto</strong> (Anodorhynchus hyacinthinus) es el mayor de los guacamayos, de plumaje azul intenso y detalles amarillos, que vive en Brasil, Bolivia y Paraguay; se alimenta de frutas y semillas y está en peligro por la deforestación y el tráfico ilegal, por lo que se considera una especie vulnerable.
+    </p>
+    <img src="imagenes/guacamayo azul.jpg"
+         alt="guacamayo jacinto"
+         width="520">
+    <p><a href="#indice">Volver al índice</a></p>
+
+    <!-- SEGUNDO ANIMAL: con ids para estilo y para anclar desde el índice -->
+    <h1 id="titulo-animal2">Segundo animal: Lince ibérico</h1>
+    <p id="desc-animal2">
+      El <strong>lince ibérico</strong> es un felino endémico de la península ibérica, de tamaño mediano, con orejas puntiagudas y pelaje moteado. Se alimenta principalmente de conejos y es considerado una especie en peligro, aunque su población está en recuperación.
+    </p>
+     <img src="imagenes/lince iberico.webp"
+         alt="lince ibérico"
+         width="520">
+   <!-- (Opcional) Imagen del segundo animal: coloca aquí si la usas -->
+    <p><a href="#indice">Volver al índice</a></p>
+  </body>
+</html>
