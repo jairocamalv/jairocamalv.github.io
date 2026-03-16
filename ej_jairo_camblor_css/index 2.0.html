@@ -1,0 +1,177 @@
+<!doctype=html>
+<html lang="es">
+  <head>
+     <meta charset=utf_8>
+     <title>Mi trabajo en TICII - Jairo Camblor</title>
+<style>
+/* ===== TIPOGRAFÍA Y FONDO GENERAL ===== */
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: rgb(245, 247, 250);
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== ZONAS SEMÁNTICAS COMO CAJAS ===== */
+header, nav, main, footer {
+  max-width: 1000px;
+  margin: 20px auto;
+  background-color: rgb(255, 255, 255);
+  border: 2px solid rgb(210, 220, 230);
+  border-radius: 14px;
+  padding: 16px;
+}
+
+/* Header: centrado y espaciado (sin imponer color, lo decidirán las clases si lo deseas) */
+header h1 {
+  text-align: center;
+  margin: 0 0 10px 0;
+}
+
+/* Nav: que se lea limpio (sin fijar colores de títulos de grupo) */
+nav h2 {
+  margin: 0 0 10px 0;
+  text-align: center;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0 0 0 18px;
+}
+
+/* Enlaces del nav: un color neutro (no depende del grupo) */
+nav a {
+  color: rgb(27, 38, 59);
+}
+
+/* ===== SECCIONES DE GRUPO COMO “BLOQUES” ===== */
+section {
+  border: 2px dashed rgb(220, 226, 230);
+  border-radius: 12px;
+  padding: 14px;
+  margin: 16px 0;
+  background-color: rgb(254,231,133);
+}
+
+/* ===== TARJETAS (article) ===== */
+article {
+  border: 1px solid rgb(0,0,205);
+  background-color: rgb(255, 255, 255);
+  border-radius: 12px;
+  padding: 14px;
+  margin: 12px 0;
+}
+/* ===== CLASES BASE ===== */
+.titulo {
+  text-align: center;
+  color: rgb(27, 38, 59);
+}
+
+.texto {
+  color: rgb(45, 55, 72);
+}
+
+.texto strong {
+  color: rgb(231, 111, 81);
+}
+
+/* ===== MODIFICADORES DE GRUPO ===== */
+.grupo-a .titulo { color: rgb(0,0,0); }
+.grupo-a .texto  { color: rgb(0, 0, 0); }
+.grupo-a .texto strong { color: rgb(0,0,0); }
+
+.grupo-b .titulo { color: rgb(0, 0, 0); }
+.grupo-b .texto  { color: rgb(0, 0, 0); }
+.grupo-b .texto strong { color: rgb(0 ,0 ,0); }
+
+/* IMPORTANTE: aquí NO ponemos colores para h2/h3/p/strong.
+   Los colores los controla CSS 3 con .titulo, .texto, .grupo-a, .grupo-b.
+*/   
+</style>
+ </head>
+  <body>
+    <main>
+      <header>
+       Jairo Camblor 1ºBach A 2025/2026
+      </header>
+ <nav>
+       <h1 id="indice">Mi trabajo en TICII</h1>
+    <ul>
+        <li><a href="#grupo-a">Presentación</a></li>
+        <li><a href="#grupo-b">Mis ejercicios · Introducción HTML</a></li>
+        <li><a href="#grupo-c">Mis ejercicios · Introducción CSS</a></li>
+        <li><a href="#grupo-d">Imagen de portada</a></li>
+        <li><a href="#grupo-e">Recursos de calidad (externos)</a></li>  
+    </ul>
+ </nav>
+<section id="grupo-a" class="grupo-a">
+  <h2 class="titulo">Grupo A</h2>
+
+  <article>
+    <h3 class="titulo">Presentación</h3>
+    <p class="texto">Hola, soy <strong>Jairo Camblor</strong> (1ºBach A). Me interesan <em>la navegación segura</em>, <em>la seguridad en intenet</em> y <em>las opciones de privacidad</em>. 
+    En esta página podrás consultar mis ejercicios de introducción a HTML y algunos recursos que considero útiles.</p>
+    <p><small>Última actualización:16/01/2026 <!-- TODO: fecha -->.</small></p>
+  </article>
+</p>
+</p>
+  </article>
+</section>
+<section id="grupo-b" class="grupo-b">
+  <h2 class="titulo">Mis ejercicios · Introducción HTML</h2>
+
+  <article>
+    <h3 class="titulo">Mis ejercicios · Introducción HTML</h3>
+    <p class="texto">Accede a cada ejercicio desde esta lista. Los archivos están en la carpeta <code>ejercicios_html/</code>:</p>
+    <ul>
+      <li><a href="ejercicios_html/web_jairo_camblor_tarea_1.html">Tarea 1 · Estructura mínima + títulos y párrafos</a></li>
+      <li><a href="ejercicios_html/web_jairo_camblor_tarea_2.html">Tarea 2 · Énfasis y anidado de etiquetas (inline)</a></li>
+      <li><a href="ejercicios_html/web_jairo_camblor_tarea_3.html">Tarea 3 · Listas en HTML</a></li>
+      <li><a href="ejercicios_html/web_jairo_camblor_tarea_4.html">Tarea 4 · Enlaces con <code>&lt;a&gt;</code></a></li>
+      <li><a href="ejercicios_html/web_jairo_camblor_tarea_5.html">Tarea 5 · Imágenes con <code>&lt;img&gt;</code></a></li>
+    </ul>
+  </article>
+</section>
+<section id="grupo-c" class="grupo-c">
+  <h2 class="titulo">Mis ejercicios · Introducción CSS</h2>
+
+  <article>
+    <h3 class="titulo">Mis ejercicios · Introducción HTML</h3>
+   <p class="texto">Accede a cada ejercicio desde esta lista. Los archivos están en la carpeta <code>ejercicios_html/</code>:</p>
+    <ul>
+      <li><a href="ejercicios_html/web_jairo_camblor_1_css.html">Tarea 1 · Color de texto, color de fondo y tipo de letra</a></li>
+      <li><a href="ejercicios_html/web_jairo_camblor_2_css.html">Tarea 2 · Selectores por id + índice interno con enlaces a secciones</a></li>
+      <li><a href="ejercicios_html/web_jairo_camblor_3_css.html">Tarea 3 · Uso de id y de class en tarea de criatura colorida</a></li>
+      <li><a href="ejercicios_html/web_jairo_camblor_4_css.html">Tarea 4 · Catálogo de animales</a></li>
+    </ul>
+  </article>
+</section>
+<section id="grupo-d" class="grupo-d">
+  <h2 class="titulo">Imagen de portada</h2>
+
+  <article>
+    <h3 class="titulo">Imagen de portada</h3>
+   <p class="texto"><section class="grupo-d">
+    <img src="imagenes/imagen de alumnado trabajando con ordenadores.webp" 
+         alt="imagen de alumnado trabajando con ordenadores"
+         width="360">
+  </article>
+</section>
+<section id="grupo-e" class="grupo-">
+  <h2 class="titulo">Recursos de calidad(externos)</h2>
+  <article>
+    <h3 class="titulo">Recursos de calidad(externos)</h3>
+   <p class="texto">Referencias consultadas durante las tareas (se abrirán en pestaña nueva):</p>
+    <ul>
+      <li><a href="https://developer.mozilla.org/es/" target="_blank">MDN Web Docs (Mozilla)</a></li>
+      <li><a href="https://www.w3schools.com/tags/" target="_blank">Referencia de etiquetas HTML</a></li>
+      <li><a href="https://commons.wikimedia.org/wiki/Main_Page?uselang=es" target="_blank">Wikimedia Commons (imágenes con licencias CC)</a></li>
+      <li><a href="https://tecnobits.com" target="_blank">Tecnobits (sitio oficial)</a></li>
+      <li><a href="https://www.aepd.es/sites/default/files/2019-11/guia-privacidad-y-seguridad-en-internet.pdf" target ="_blank">Agencia Española de Protección de Datos (sitio oficial)</a></li>
+      <li><a href="https://www.bancosantander.es/glosario/navegacion-segura" target ="_blank">Banco Santander (sitio oficial)</a></li>
+    </ul>
+  </article>
+</section>
