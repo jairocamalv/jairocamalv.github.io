@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="es">
+<head>
+<title>Promedio</title>
+<style>
+h1 {
+    color: blue
+}
+</style>
+</head>
+<body>
+<script>
+// Pedimos cuántos números quiere promediar
+ let cantidad = prompt("¿Cuántos números quieres promediar?");
+ cantidad = parseInt(cantidad); 
+
+// Validación básica 
+if (isNaN(cantidad) || cantidad <= 0) {
+     document.write("<h1>Debes introducir un número válido mayor que cero.</h1>"); 
+     } else { 
+        let suma = 0;
+
+// Pedimos los valores uno por uno  
+for (let i = 1; i <= cantidad; i++) {
+    let valor = parseFloat(prompt("Introduce el número " + i));
+     if (isNaN(valor)) {
+         document.write("<h1>Uno de los valores no es válido.</h1>");
+          suma = null;
+           break; } 
+           suma += valor; } 
+
+// calculamos el promedio 
+ if (suma !== null) {
+     let promedio = suma / cantidad; document.write("<h1>El promedio es: " + promedio + "</h1>");
+     }
+      }
+</script>
+</body> 
+</html>

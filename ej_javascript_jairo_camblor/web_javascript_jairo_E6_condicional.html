@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Examen de Conducir - Condicional</title>
+</head>
+<body>
+
+<script>
+// Pedimos el número de fallos al usuario
+let numeroFallos = prompt("¿Cuántos fallos has tenido en el examen?");
+
+// Convertimos a número
+numeroFallos = parseInt(numeroFallos);
+
+// Estructura condicional solicitada
+if (numeroFallos > 3) {
+  alert("No Apto");
+  document.write("<h2>Resultado: No Apto</h2>");
+} 
+else {
+  alert("Apto");
+  document.write("<h2>Resultado: Apto</h2>");
+}
+</script>
+
+</body>
+</html>

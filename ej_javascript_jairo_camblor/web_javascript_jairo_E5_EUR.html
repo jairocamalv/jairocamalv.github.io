@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Conversor EUR a USD</title>
+  <style>h2 { color: darkgoldenrod; }</style>
+</head>
+<body>
+<script>
+  let euros = prompt("Introduce la cantidad en Euros:");
+  euros = parseFloat(euros);
+
+  if (isNaN(euros) || euros < 0) {
+    document.write("<h2>Cantidad no válida.</h2>");
+  } else {
+    let tasa = 1.08; // Ejemplo de tasa de cambio
+    let dolares = euros * tasa;
+    document.write("<h2>El valor es: $" + dolares.toFixed(2) + " USD.</h2>");
+  }
+</script>
+</body>
+</html>

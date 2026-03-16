@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Calculo de área de um cuadrado</title>
+  <style>
+    h2 {
+         color: green
+    }
+  </style>
+</head>
+<body>
+
+<script>
+
+// pedimos los dos lados del cuadrado
+let num1;
+
+//pedimos los valores al usuario
+num1= prompt("dame su lado")
+
+// Convierto a número real
+num1 = parseFloat(num1);
+
+// Función para elevar un número al cuadrado
+ function elevarAlCuadrado(valor) { 
+    const numero = Number(valor);
+    return numero * numero; }
+
+// Hacemos el área 
+let area = elevarAlCuadrado(num1);
+
+// Damos el resultado de su área
+document.write("<h2>El área de su cuadrado es:" + area + "</h2>");
+</script>
+</body>
+</html>
+
+

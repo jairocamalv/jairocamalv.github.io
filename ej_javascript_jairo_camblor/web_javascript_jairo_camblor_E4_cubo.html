@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Calculo del volumen de un cubo</title>
+  <style>
+    h2 {
+         color: orange
+    }
+  </style>
+</head>
+<body>
+
+<script>
+
+// pedimos los dos lados del cuadrado
+let num1;
+
+//pedimos los valores al usuario
+num1= prompt("dame su lado")
+
+// Convierto a número real
+num1 = parseFloat(num1);
+
+// Función para elevar un número al cubo
+ function elevarAlCubo(valor) { 
+    const numero = Number(valor);
+    return numero * numero; }
+
+// Hacemos el área 
+let area = elevarAlCubo(num1);
+
+// Damos el resultado de su área
+document.write("<h2>El área de su cuadrado es:" + area + "</h2>");
+</script>
+</body>
+</html>

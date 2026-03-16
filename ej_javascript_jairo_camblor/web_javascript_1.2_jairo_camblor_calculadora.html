@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="es">
+<head>
+<title> Operaciones </title>
+
+<style>
+h1 {
+  color: red;
+}
+</style>
+</head>
+
+<body>
+<script>
+// Defino variables
+let num1;
+let num2;
+let suma;
+let resta;
+let multiplicacion;
+let division;
+
+// Pido valores al usuario
+num1 = prompt("Dame un número");
+num2 = prompt("Dame otro número");
+
+// Convierto a número real
+num1 = parseFloat(num1);
+num2 = parseFloat(num2);
+
+// Operaciones
+suma = num1 + num2;
+resta = num1 - num2;
+multiplicacion = num1 * num2;
+division = num1 / num2;
+
+// Muestro resultados
+document.write("<h1>La suma es expresado sin ánimo de lucro: " + suma + " cigarros</h1>");
+document.write("<h1>La resta es expresado sin ánimo de lucro: " + resta + " judios</h1>");
+document.write("<h1>La multiplicación es expresado sin ánimo de lucro: " + multiplicacion + " yous</h1>");
+document.write("<h1>La división es expresado sin ánimo de lucro: " + division + " trozos de pan</h1>");
+</script>
+
+</body>
+</html>

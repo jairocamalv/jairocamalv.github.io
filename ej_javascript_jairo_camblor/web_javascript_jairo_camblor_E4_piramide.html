@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Cálculo del volumen de una piramide</title>
+  <style>
+    h2 {
+      color: dark green;
+    }
+  </style>
+</head>
+<body>
+
+<script>
+// Pedimos la base, la altura y la profundidad de la piramide
+let base = prompt("Dame la base de la piramide");
+let altura = prompt("Dame la altura de la piramide");
+let profundidad = prompt("Dame la profundidad de la piramide");
+
+// Convertimos a número real
+base = parseFloat(base);
+altura = parseFloat(altura);
+profundidad = parseFloat(profundidad);
+
+// Función para calcular el volumen de una piramide
+function calcularVolumenPiramide(b, h, p) {
+  return (b * h) / 3;
+}
+
+// Validamos los datos
+if (isNaN(base) || isNaN(altura) || base <= 0 || altura <= 0) {
+  document.write("<h2>Por favor introduce valores válidos mayores que 0.</h2>");
+} else {
+  // Calculamos el área
+  let area = calcularVolumenPiramide(base, altura, profundidad);
+
+  // Mostramos el resultado
+  document.write("<h2>El volumen de su piramide es: " + area + "</h2>");
+}
+</script>
+
+</body>
+</html>

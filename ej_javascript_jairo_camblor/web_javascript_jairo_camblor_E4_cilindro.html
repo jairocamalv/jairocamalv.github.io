@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Cálculo del volumen de un cilindro</title>
+  <style>
+    h2 {
+      color: dark green;
+    }
+  </style>
+</head>
+<body>
+
+<script>
+// Pedimos el radio del cilindro
+let radio = prompt("Dame el radio del cilindro");
+let altura = prompt("Dame la altura del cilindro");
+
+
+// Convertimos a número real
+radio = parseFloat(radio);
+altura= parseFloat(altura);
+
+// Función para calcular el área de un cilindro
+function calcularVolumenCilindro(r, h) {
+  return Math.PI * (r * r) * h;
+}
+
+// Validamos los datos
+if (isNaN(radio) || radio <= 0) {
+  document.write("<h2>Por favor introduce un valor válido mayor que 0.</h2>");
+} else {
+  // Calculamos el área
+  let area = calcularVolumenCilindro(radio, altura);
+
+  // Mostramos el resultado
+  document.write("<h2>El volumen del cilindro es: " + area.toFixed(2) + "</h2>");
+}
+</script>
+
+</body>
+</html>

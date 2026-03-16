@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Conversor Km a m</title>
+  <style>h2 { color: darkblue; }</style>
+</head>
+<body>
+<script>
+  let km = prompt("Introduce los kilómetros:");
+  km = parseFloat(km);
+
+  if (isNaN(km) || km < 0) {
+    document.write("<h2>Por favor, introduce un número válido.</h2>");
+  } else {
+    let metros = km * 1000;
+    document.write("<h2>El resultado es: " + metros + " metros.</h2>");
+  }
+</script>
+</body>
+</html>

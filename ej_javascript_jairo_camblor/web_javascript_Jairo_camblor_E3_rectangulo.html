@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Cálculo de área de un rectángulo</title>
+  <style>
+    h2 {
+      color: yellow;
+    }
+  </style>
+</head>
+<body>
+
+<script>
+// Pedimos la base y la altura del rectángulo
+let base = prompt("Dame la base del rectángulo");
+let altura = prompt("Dame la altura del rectángulo");
+
+// Convertimos a número real
+base = parseFloat(base);
+altura = parseFloat(altura);
+
+// Función para calcular el área de un rectángulo
+function calcularAreaRectangulo(b, h) {
+  return b * h;
+}
+
+// Validamos los datos
+if (isNaN(base) || isNaN(altura) || base <= 0 || altura <= 0) {
+  document.write("<h2>Por favor introduce valores válidos mayores que 0.</h2>");
+} else {
+  // Calculamos el área
+  let area = calcularAreaRectangulo(base, altura);
+
+  // Mostramos el resultado
+  document.write("<h2>El área de su rectángulo es: " + area + "</h2>");
+}
+</script>
+
+</body>
+</html>
+

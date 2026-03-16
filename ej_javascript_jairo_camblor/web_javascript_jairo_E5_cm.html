@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Conversor cm a Pulgadas</title>
+  <style>h2 { color: purple; }</style>
+</head>
+<body>
+<script>
+  let cm = prompt("Introduce los centímetros:");
+  cm = parseFloat(cm);
+
+  if (isNaN(cm) || cm < 0) {
+    document.write("<h2>Valor no válido.</h2>");
+  } else {
+    let pulgadas = cm / 2.54;
+    document.write("<h2>El resultado es: " + pulgadas.toFixed(2) + " pulgadas.</h2>");
+  }
+</script>
+</body>
+</html>

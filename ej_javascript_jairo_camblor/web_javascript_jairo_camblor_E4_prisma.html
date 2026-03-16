@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Cálculo de área de un prisma rectángular</title>
+  <style>
+    h2 {
+      color: pink;
+    }
+  </style>
+</head>
+<body>
+
+<script>
+// Pedimos la base y la altura del prisma rectángular
+let base = prompt("Dame la base del prisma rectángular");
+let altura = prompt("Dame la altura del prisma rectángular");
+let profundidad = prompt("Dame la profundidad del prisma rectángular");
+
+// Convertimos a número real
+base = parseFloat(base);
+altura = parseFloat(altura);
+profundidad = parseFloat(profundidad);
+
+// Función para calcular el volumen de in prisma rectangular
+function calcularvolumenPrismaRectangular(b, h, p) {
+  return  (h * b * p);
+}
+
+// Validamos los datos
+if (isNaN(base) || isNaN(altura) || base <= 0 || altura <= 0 || profundidad <= 0)  {
+  document.write("<h2>Por favor introduce valores válidos mayores que 0.</h2>");
+} else {
+  // Calculamos el área
+  let area = calcularvolumenPrismaRectangular(base, altura, profundidad);
+
+  // Mostramos el resultado
+  document.write("<h2>El volumen de su prisma rectángular es: " + area + "</h2>");
+}
+</script>
+
+</body>
+</html>
+

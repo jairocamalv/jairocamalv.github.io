@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Cálculo de Promedio Estudiantil</title>
+</head>
+<body>
+
+<script>
+// 1. Pedimos las tres notas (trimestres) al usuario
+let nota1 = prompt("Introduce la nota del primer trimestre:");
+let nota2 = prompt("Introduce la nota del segundo trimestre:");
+let nota3 = prompt("Introduce la nota del tercer trimestre:");
+
+// 2. Convertimos a número real (decimal)
+nota1 = parseFloat(nota1);
+nota2 = parseFloat(nota2);
+nota3 = parseFloat(nota3);
+
+// 3. Calculamos el promedio (suma de las tres dividido entre 3)
+let promedio = (nota1 + nota2 + nota3) / 3;
+
+// 4. Estructura condicional según el criterio del ejercicio
+if (promedio >= 4.5) {
+  alert("Felicidades, has aprobado con un: " + promedio.toFixed(2));
+  document.write("<h2>Resultado: Aprobado</h2>");
+  document.write("<p>Tu media final es: " + promedio.toFixed(2) + "</p>");
+} 
+else {
+  alert("Lo siento, no has alcanzado el mínimo. Media: " + promedio.toFixed(2));
+  document.write("<h2>Resultado: No Aprobado</h2>");
+  document.write("<p>Tu media final es: " + promedio.toFixed(2) + "</p>");
+}
+</script>
+
+</body>
+</html>

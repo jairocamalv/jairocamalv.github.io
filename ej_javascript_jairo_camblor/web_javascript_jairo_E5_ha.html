@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Conversor Ha a m2</title>
+  <style>h2 { color: darkgreen; }</style>
+</head>
+<body>
+<script>
+  let ha = prompt("Introduce las hectáreas:");
+  ha = parseFloat(ha);
+
+  if (isNaN(ha) || ha < 0) {
+    document.write("<h2>Valor no válido.</h2>");
+  } else {
+    let m2 = ha * 10000;
+    document.write("<h2>La superficie es: " + m2.toLocaleString() + " m².</h2>");
+  }
+</script>
+</body>
+</html>
