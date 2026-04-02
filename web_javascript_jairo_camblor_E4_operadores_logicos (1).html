@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 04 — Operadores lógicos</title>
+</head>
+<body>
+
+    <h1>Ejercicio 04 — Operadores lógicos</h1>
+
+    <script>
+        // 2. Variables iniciales
+        var A = 10;
+        var B = 20;
+
+        // 4. Mostrar resultados con document.write()
+        document.write("<h2>Resultados de operadores lógicos</h2>");
+
+        // Ejemplo AND (&&) - ¿Se cumplen AMBAS?
+        // (10 < 20 es true, pero 20 < 10 es false) -> Resultado: false
+        document.write("<p>(A < B && B < A): " + (A < B && B < A) + "</p>");
+
+        // Ejemplo OR (||) - ¿Se cumple AL MENOS UNA?
+        // (10 < 20 es true, con eso basta) -> Resultado: true
+        document.write("<p>(A < B || B < A): " + (A < B || B < A) + "</p>");
+
+        // Ejemplo NOT (!) - Lo CONTRARIO de la comparación
+        // (10 < 20 es true, el NOT lo vuelve...) -> Resultado: false
+        document.write("<p>!(A < B): " + (!(A < B)) + "</p>");
+
+        // 5. Reto obligatorio
+        document.write("<p>(A == 10 && B > 15): " + (A == 10 && B > 15) + " (Porque ambas son verdad)</p>");
+        document.write("<p>(A > 100 || B == 20): " + (A > 100 || B == 20) + " (Porque la segunda es verdad)</p>");
+    </script>
+
+</body>
+</html>
