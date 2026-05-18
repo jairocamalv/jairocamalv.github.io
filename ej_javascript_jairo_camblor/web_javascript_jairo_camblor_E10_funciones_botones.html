@@ -1,0 +1,57 @@
+ <!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ejercicio 10 — Funciones y botones</title>
+    </head>
+    <body>
+
+        <h1>Ejercicio 10 — Funciones y botones</h1>
+
+        <p>En esta página se usan botones para ejecutar diferentes funciones en JavaScript.</p>
+
+        <button onclick="saludar()">Saludar</button>
+        <button onclick="sumarDosNumeros()">Sumar dos números</button>
+        <button onclick="calcularEdad()">Calcular año de nacimiento</button>
+        <button onclick="comprobarMayorEdad()">Comprobar mayoría de edad</button>
+        <button onclick="mostrar67()">67</button>
+
+        <script>
+            function saludar() {
+        alert("Hola. Has ejecutado la función saludar.");
+    }
+             function sumarDosNumeros() {
+        var numero1 = Number(prompt("Introduce el primer número"));
+        var numero2 = Number(prompt("Introduce el segundo número"));
+
+        var suma = numero1 + numero2;
+
+        alert("El resultado de la suma es: " + suma);
+    }
+           function calcularEdad() {
+        var edad = Number(prompt("Introduce tu edad"));
+        var anioActual = 2026;
+
+        var fechaNacimiento = anioActual - edad;
+
+        alert("Tu año aproximado de nacimiento es: " + fechaNacimiento);
+    }
+            function comprobarMayorEdad() {
+        var edad = Number(prompt("Introduce tu edad"));
+
+        if (edad >= 18) {
+            alert("Eres mayor de edad.");
+        } else {
+            alert("Eres menor de edad.");
+        }
+    }
+            function mostrar67() {
+        alert("67");
+    }    
+
+
+        </script>
+
+    </body>
+    </html>

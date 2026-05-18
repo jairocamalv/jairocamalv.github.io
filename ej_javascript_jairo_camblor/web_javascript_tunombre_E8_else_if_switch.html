@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 08 — else if y switch</title>
+</head>
+<body>
+    <h1>Ejercicio 08 — Estructuras condicionales else if y switch</h1>
+    <p>En este ejercicio se trabaja con decisiones múltiples, corrección de errores de sintaxis y comparación entre else if y switch.</p>
+
+    <script>
+        // --- PARTE 1: Ejemplo modificado ---
+        document.write("<h2>Parte 1: Mi ejemplo modificado</h2>");
+        var entregada = window.prompt("¿Has entregado la tarea de JavaScript? (si/no)");
+
+        if (entregada == "si") {
+            document.write("<p>¡Excelente trabajo! Tienes tu nota registrada.</p>");
+        } else if (entregada == "no") {
+            document.write("<p>Aún estás a tiempo, pero no te retrases más.</p>");
+        } else {
+            document.write("<p>Por favor, responde 'si' o 'no' para poder ayudarte.</p>");
+        }
+
+        // --- PARTE 2: Corrección de errores ---
+        document.write("<h2>Parte 2: Corrección de errores</h2>");
+
+        // Ejercicio 1
+        let numero = prompt("Ingresa un número:"); 
+        if (numero > 0) { alert("El número es positivo"); } 
+        else if (numero < 0) { alert("El número es negativo"); } 
+        else { alert("El número es cero"); }
+        document.write("<p><b>Ejercicio 1:</b> El programa pide un número y usa if/else para decir si es positivo, negativo o cero.</p>");
+
+        // Ejercicio 2
+        let contraseña = prompt("Ingresa tu contraseña:"); 
+        if (contraseña === "secreto123") { document.write("<p><b>Ejercicio 2:</b> Contraseña correcta. Bienvenido!</p>"); } 
+        else { document.write("<p><b>Ejercicio 2:</b> Contraseña incorrecta. Inténtalo de nuevo.</p>"); }
+        // Explicación: Compara el texto ingresado con la clave. Si coincide, escribe el éxito en pantalla.
+
+        // Ejercicio 3
+        let valor = null;
+        if (valor === null) { alert("El valor es nulo."); } 
+        else { alert("El valor no es nulo."); }
+        document.write("<p><b>Ejercicio 3:</b> Como la variable nace siendo null, siempre entra en el primer bloque del if.</p>");
+
+        // Ejercicio 4
+        let num = parseInt(prompt("Ingresa un número para evaluar:"));
+        if (num > 0 && num % 2 === 0) { document.write("<p><b>Ejercicio 4:</b> El número es positivo y es par.</p>"); } 
+        else if (num > 0 && num % 2 !== 0) { document.write("<p><b>Ejercicio 4:</b> El número es positivo y es impar.</p>"); } 
+        else { document.write("<p><b>Ejercicio 4:</b> El número no es positivo o no es par.</p>"); }
+        // Explicación: Convierte a entero y comprueba si es mayor a cero y si el resto de dividir por 2 es cero.
+
+        // --- PARTE 3: Helados con else if ---
+        document.write("<h2>Parte 3: Programa de helados (else if)</h2>");
+        var topping = window.prompt("qué topping quieres: oreo, kitkat, brownie, lacasitos u otro");
+        var precio = 0.00;
+        var helado = 1.90;
+        var precioFinal = 0.00;
+
+        if (topping == "oreo") {
+            precio = 1;
+        } else if (topping == "kitkat") {
+            precio = 1.50;
+        } else if (topping == "brownie") {
+            precio = 0.75;
+        } else if (topping == "lacasitos") {
+            precio = 0.95;
+        } else {
+            document.write("<p>No tenemos este topping, lo sentimos.</p>");
+            precio = 0;
+        }
+        precioFinal = helado + precio;
+        document.write("<p>El helado cuesta " + precioFinal + " €</p>");
+
+        // --- PARTE 4: Helados con switch ---
+        document.write("<h2>Parte 4: Programa de helados (switch)</h2>");
+        var toppingS = window.prompt("Vuelve a elegir topping para la versión switch:");
+        var precioS = 0;
+        var heladoS = 1.90;
+
+        switch (toppingS) {
+            case "oreo":
+                precioS = 1;
+                break;
+            case "kitkat":
+                precioS = 1.50;
+                break;
+            case "brownie":
+                precioS = 0.75;
+                break;
+            case "lacasitos":
+                precioS = 0.95;
+                break;
+            default:
+                document.write("<p>No tenemos este topping en switch.</p>");
+                precioS = 0;
+        }
+        document.write("<p>El precio final (switch) es: " + (heladoS + precioS) + " €</p>");
+    </script>
+</body>
+</html>

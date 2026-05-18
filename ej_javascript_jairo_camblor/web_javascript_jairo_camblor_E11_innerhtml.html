@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 11 — innerHTML</title>
+
+    <style>
+        .caja {
+            border: 2px solid black;
+            padding: 10px;
+            margin: 10px;
+            min-height: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Ejercicio 11 — Modificación de HTML con JavaScript</h1>
+
+    <button onclick="saludar()">Saludar</button>
+    <button onclick="sumarDosNumeros()">Sumar dos números</button>
+    <button onclick="calcularNacimiento()">Calcular nacimiento</button>
+    <button onclick="comprobarMayorEdad()">Mayoría de edad</button>
+    <button onclick="agregarMensaje()">Append</button>
+    <button onclick="fraseAleatoria()">Frase aleatoria</button> <!-- Sexta función -->
+
+    <div id="cajaSaludo" class="caja"></div>
+    <div id="cajaSuma" class="caja"></div>
+    <div id="cajaNacimiento" class="caja"></div>
+    <div id="cajaEdad" class="caja"></div>
+    <div id="cajaAppend" class="caja"></div>
+    <div id="cajaFrase" class="caja"></div> <!-- Caja extra -->
+
+    <script>
+
+    // 1. Saludar
+    function saludar() {
+        let caja = document.getElementById("cajaSaludo");
+        caja.innerHTML = "<h2>Hola desde JavaScript</h2>";
+    }
+
+    // 2. Sumar dos números
+    function sumarDosNumeros() {
+        let numero1 = Number(prompt("Introduce el primer número"));
+        let numero2 = Number(prompt("Introduce el segundo número"));
+
+        let suma = numero1 + numero2;
+
+        let caja = document.getElementById("cajaSuma");
+        caja.innerHTML = "<p>La suma es: <strong>" + suma + "</strong></p>";
+    }
+
+    // 3. Calcular año de nacimiento
+    function calcularNacimiento() {
+        let edad = Number(prompt("¿Cuántos años tienes?"));
+        let añoActual = new Date().getFullYear();
+        let nacimiento = añoActual - edad;
+
+        let caja = document.getElementById("cajaNacimiento");
+        caja.innerHTML = "<p>Naciste aproximadamente en el año <strong>" + nacimiento + "</strong></p>";
+    }
+
+    // 4. Comprobar mayoría de edad
+    function comprobarMayorEdad() {
+        let edad = Number(prompt("Introduce tu edad"));
+        let caja = document.getElementById("cajaEdad");
+
+        if (edad >= 18) {
+            caja.innerHTML = "<p>Eres <strong>mayor</strong> de edad</p>";
+        } else {
+            caja.innerHTML = "<p>Eres <strong>menor</strong> de edad</p>";
+        }
+    }
+
+    // 5. Añadir contenido con append()
+    function agregarMensaje() {
+        let caja = document.getElementById("cajaAppend");
+        caja.append(" Jairo es muy listo ");
+    }
+
+    // 6. Función extra — Frase aleatoria
+    function fraseAleatoria() {
+        let frases = [
+            "Hoy será un gran día.",
+            "Sigue aprendiendo, vas muy bien.",
+            "Jairo se merece un 10.",
+            "Cada error te acerca a la solución.",
+            "solo se que no se nada."
+        ];
+
+        let aleatoria = frases[Math.floor(Math.random() * frases.length)];
+
+        let caja = document.getElementById("cajaFrase");
+        caja.innerHTML = "<p>" + aleatoria + "</p>";
+    }
+
+    </script>
+
+</body>
+</html>
