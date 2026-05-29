@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 13 — Bucle while</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        .caja {
+            border: 2px solid black;
+            padding: 10px;
+            margin-top: 20px;
+            background-color: #f4f4f4;
+        }
+
+        button {
+            margin-left: 10px;
+            padding: 5px 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Ejercicio 13 — Juego de adivinanza con while</h1>
+
+    <p>
+        En este ejercicio se genera un número aleatorio y el usuario debe adivinarlo.
+        El programa usa un bucle while para seguir preguntando hasta que se acierta.
+    </p>
+
+    <label for="maximo">Número máximo del juego:</label>
+
+    <input type="number" id="maximo" value="10">
+
+    <button onclick="jugar()">Iniciar juego</button>
+
+    <div id="resultado" class="caja"></div>
+
+    <script>
+
+        function jugar() {
+
+            let maximo = Number(document.getElementById("maximo").value);
+
+            let numeroSecreto = Math.floor(Math.random() * maximo) + 1;
+
+            let intento = Number(prompt("Adivina el número entre 1 y " + maximo));
+
+            let contador = 1;
+
+            let texto = "<h2>Juego terminado</h2>";
+
+            /* Mejora obligatoria: subtítulo */
+            texto = texto + "<h3>Historial de intentos</h3>";
+
+            while (intento != numeroSecreto) {
+
+                if (intento < numeroSecreto) {
+
+                    texto = texto +
+                    "<p>Intento " + contador +
+                    ": " + intento +
+                    " es demasiado pequeño. Prueba con un número mayor.</p>";
+
+                } else {
+
+                    texto = texto +
+                    "<p>Intento " + contador +
+                    ": " + intento +
+                    " es demasiado grande. Prueba con un número menor.</p>";
+                }
+
+                intento = Number(prompt("Vuelve a intentarlo"));
+
+                contador = contador + 1;
+            }
+
+            texto = texto +
+            "<h2>Has acertado. El número era " + numeroSecreto + "</h2>";
+
+            texto = texto +
+            "<p>Número total de intentos: " + contador + "</p>";
+
+            let cajaResultado = document.getElementById("resultado");
+
+            cajaResultado.innerHTML = texto;
+        }
+
+    </script>
+
+</body>
+</html>

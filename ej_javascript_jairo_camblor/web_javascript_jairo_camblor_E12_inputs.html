@@ -1,0 +1,178 @@
+  <!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ejercicio 12 — Inputs y HTML dinámico</title>
+
+ 
+        <style>
+
+ 
+        .caja {
+            border: 2px solid black;
+            padding: 10px;
+            margin: 10px;
+        }
+
+ 
+        </style>
+
+ 
+    </head>
+    <body>
+
+ 
+        <h1>Ejercicio 12 — Inputs y HTML dinámico</h1>
+
+ 
+        <h2>Saludo</h2>
+
+ 
+        <input type="text" id="nombre">
+
+ 
+        <button onclick="saludar()">Saludar</button>
+
+ 
+        <div id="resultadoSaludo" class="caja"></div>
+
+ 
+        <hr>
+
+ 
+        <h2>Suma de números</h2>
+
+ 
+        <input type="number" id="numero1">
+        <input type="number" id="numero2">
+
+ 
+        <button onclick="sumar()">Sumar</button>
+
+ 
+        <div id="resultadoSuma" class="caja"></div>
+
+ 
+        <hr>
+
+ 
+        <h2>Mayoría de edad</h2>
+
+ 
+        <input type="number" id="edad">
+
+ 
+        <button onclick="comprobarMayorEdad()">Comprobar edad</button>
+
+ 
+        <div id="resultadoEdad" class="caja"></div>
+
+ 
+        <hr>
+
+ 
+        <h2>Append</h2>
+
+ 
+        <button onclick="agregarMensaje()">Añadir mensaje</button>
+
+ 
+        <div id="resultadoAppend" class="caja"></div>
+
+        <hr>
+
+        <h2> HORA </h2>
+
+         <button onclick="mostrarHora()">Mostrar hora actual</button>
+
+         <div id="cajaHora" class="caja"></div> 
+
+        <script>
+
+ 
+        // Aquí irán las funciones
+    function saludar() {
+
+ 
+        let nombre = document.getElementById("nombre").value;
+
+ 
+        let resultado = document.getElementById("resultadoSaludo");
+
+ 
+        resultado.innerHTML = "<h2>Hola " + nombre + "</h2>";
+
+ 
+    }
+    
+    function sumar() {
+
+ 
+        let numero1 = Number(document.getElementById("numero1").value);
+
+ 
+        let numero2 = Number(document.getElementById("numero2").value);
+
+ 
+        let suma = numero1 + numero2;
+
+ 
+        let resultado = document.getElementById("resultadoSuma");
+
+ 
+        resultado.innerHTML = "<p>La suma es: " + suma + "</p>";
+
+ 
+    }
+
+   function agregarMensaje() {
+
+ 
+        let caja = document.getElementById("resultadoAppend");
+
+ 
+        caja.append(" jairo lo ha hecho bien ");
+
+ 
+    }
+
+    function comprobarMayorEdad() {
+    let edad = Number(document.getElementById("edad").value);
+    let caja = document.getElementById("resultadoEdad");
+
+    if (!edad && edad !== 0) {
+        caja.innerHTML = "<p>Por favor, introduce una edad válida.</p>";
+        return;
+    }
+
+    if (edad >= 18) {
+        caja.innerHTML = "<p>Eres mayor de edad</p>";
+    } else {
+        caja.innerHTML = "<p>Eres menor de edad</p>";
+    }
+}
+
+
+
+    function mostrarHora() {
+        let caja = document.getElementById("cajaHora");
+        let hora = new Date().toLocaleTimeString();
+        caja.innerHTML = "<p>La hora actual es: <strong>" + hora + "</strong></p>";
+    }
+
+
+    </script>
+
+ 
+
+
+ 
+        </script>
+
+ 
+    </body>
+    </html>
+
+ 
+---
